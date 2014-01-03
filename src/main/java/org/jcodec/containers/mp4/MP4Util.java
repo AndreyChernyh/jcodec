@@ -136,7 +136,7 @@ public class MP4Util {
     }
 
     public static void writeMovie(SeekableByteChannel out, MovieBox movie) throws IOException {
-        ByteBuffer buf = ByteBuffer.allocate(16 * 1024 * 1024);
+        ByteBuffer buf = ByteBuffer.allocate(1024 * 1024);
         movie.write(buf);
         buf.flip();
         out.write(buf);
